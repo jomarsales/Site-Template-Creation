@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    @RenderSection("head", required: true)
+</head>
+<body>
+    @RenderSection("topo", required: true)
+    @RenderBody()
+    @RenderSection("rodape", required: true)
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

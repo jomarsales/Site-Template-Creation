@@ -1,0 +1,47 @@
+﻿@model Template01.Models.Shared.Head
+<meta charset="utf-8" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="@Model.Description">
+<meta name="keywords" content="@Model.KeyWords">
+<meta name="author" content="@Model.Author">
+@if (Model.RefreshTime > 0)
+{
+    <meta http-equiv="refresh" content="@Model.RefreshTime">
+}
+<meta itemprop="name" content="@Model.Title">
+<meta itemprop="description" content="@Model.Description">
+<meta itemprop="image" content="@Model.ImageSrc">
+<title>@Model.Title</title>
+<link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+@Styles.Render("~/Content/css")
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<script src='@Scripts.Url("~/bundles/modernizr")' async> </script>
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="@Model.Favicon" type="image/x-icon">
+<meta property="og:image" content="@Model.ImageSrc"/>
+<link rel="image_src" href="@Model.ImageSrc" />
+<!-- iOS/Android -->
+<meta name="apple-mobile-web-app-title" content="@Model.AppName">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="@Model.TouchIcon152">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Model.TouchIcon144">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="@Model.TouchIcon120">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Model.TouchIcon114">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="@Model.TouchIcon76">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Model.TouchIcon72">
+<link rel="apple-touch-icon-precomposed" href="@Model.TouchIcon">
+<!-- Windows 8 metro/pinning -->
+<meta name="application-name" content="@Model.AppName">
+<meta name="msapplication-tooltip" content="@Model.Title">
+<meta name="msapplication-TileColor" content="#b5106e">
+<!-- "msapplication-TileImage" is only used in Windows 8.0 and should be a 144×144 transparent PNG -->
+<meta name="msapplication-TileImage" content="@Model.TouchIcon">
+<!-- Despite the names, image sizes are actually 128×128, 270×270, 558×270, and 558×558 -->
+<meta name="msapplication-square70x70logo" content="@Model.TouchIcon70">
+<meta name="msapplication-square150x150logo" content="@Model.TouchIcon150">
+<meta name="msapplication-wide310x150logo" content="@Model.TouchIcon310">
+<meta name="msapplication-square310x310logo" content="@Model.TouchIcon310">

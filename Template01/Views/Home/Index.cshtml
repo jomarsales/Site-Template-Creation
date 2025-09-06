@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section head
+{
+    @Html.Partial("_Head"@*, @Model.Head*@)
+}
+@section topo
+{
+    @Html.Partial("_Header"@*, @Model.Topo*@)
+}
+
+@* Contéudo do site *@
+
+@section rodape
+{
+    @Html.Partial("_Footer"@*, @Model.Rodape*@)
+}
